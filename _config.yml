@@ -1,5 +1,6 @@
-remote_theme: pages-themes/modernist@v0.2.0
+remote_theme: pages-themes/merlot@v0.2.0
 plugins:
 - jekyll-theme-minimal
+
 title: The GitHub page for CSC-2463
 description: This page is used to display my assignments for LSU CSC-2463 class.
