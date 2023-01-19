@@ -4,3 +4,7 @@ plugins:
 
 title: The GitHub page for CSC-2463
 description: This page is used to display my assignments for LSU CSC-2463 class.
+
+layout: page
+title: "About"
+permalink: /about
