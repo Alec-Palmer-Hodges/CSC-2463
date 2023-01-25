@@ -47,7 +47,7 @@ li {
 }
 
 /* Dropdown Menu */ 
-.assignments {
+.assignment_1 {
     position: relative;
 }
 .dropdown {
@@ -69,7 +69,7 @@ li {
 .dropdown li:hover {
     background-color: #4c9e9e;
 }
-.assignments:hover .dropdown {
+.assignment_1:hover .dropdown {
     display: block;
 }
 
@@ -224,4 +224,11 @@ body{
 .content .btns a:hover{
   background: #69a6ce;
   color: #fff;
+}
+
+.h1 {
+    font-size: 3.2em;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
