@@ -47,7 +47,7 @@ li {
 }
 
 /* Dropdown Menu */ 
-.assignment_1 {
+.assignment {
     position: relative;
 }
 .dropdown {
@@ -69,7 +69,7 @@ li {
 .dropdown li:hover {
     background-color: #4c9e9e;
 }
-.assignment_1:hover .dropdown {
+.assignment:hover .dropdown {
     display: block;
 }
 
