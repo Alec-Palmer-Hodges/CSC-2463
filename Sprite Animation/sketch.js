@@ -1,26 +1,37 @@
-let spriteSheet;
-let spriteData;
-
-let animation = [];
-
-let sprite= [];
+let spritesheet=[];
+let animationSet = [];
+let yLocation = 0;
+let characters = [];
 
 function preload() {
-   // spriteData = loadJSON('sprite.json');
-    spriteSheet = loadImage('Green.png');
+  spritesheet = [loadImage('../Assets/Green.png'),
+                 loadImage('../Assets/Spelunky Guy.png')];
 }
 
-function setup() {
-    createCanvas(windowWidth, windowHeight);
 
-    let frames = spriteData.frames;
+function setup() {
+  createCanvas(windowWidth - 20,windowHeight - 20);
+  for(sheet of spritesheet){
     for (let i = 0; i < 9; i++) {
-        let img = spriteSheet.get(i * 80, 0, 80, 80);
-        animation.push(img);
-    }
+      let img = sheet.get(80*i, 0, 80, 80);
+      animationSet.push(img);
+    } 
+    characters.push(new Sprite(animationSet,random()*(width-80),yLocation+40));
+    yLocation+= height/4;
+    animationSet = [];
+  }
 }
 
 function draw() {
-    background(255);
-    
+  background(255);
+  for(let sprite of characters){
+    sprite.show();
+    if(keyIsDown(RIGHT_ARROW)){
+      sprite.walkRight();
+    }else if(keyIsDown(LEFT_ARROW)){
+      sprite.walkLeft();
+    } else{
+      sprite.stand();
+    }
+  }
 }
