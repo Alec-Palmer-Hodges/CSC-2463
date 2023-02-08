@@ -16,7 +16,7 @@ function setup() {
       let img = sheet.get(80*i, 0, 80, 80);
       animationSet.push(img);
     } 
-    characters.push(new Sprite(animationSet,random()*(width-80),yLocation+40));
+    characters.push(new Sprite(animationSet,random()*(width-80),yLocation+200));
     yLocation+= height/4;
     animationSet = [];
   }
